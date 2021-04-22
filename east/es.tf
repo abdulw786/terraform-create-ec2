@@ -46,6 +46,7 @@ CONFIG
   }
 
  ebs_options {
+    ebs_enabled = true
     volume_size = 10
   }
   tags = {
