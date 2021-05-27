@@ -4,7 +4,7 @@ resource "aws_lb" "default" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.default.id]
-  subnets            = each.value
+  subnets            = [each.value]
   enable_deletion_protection = false
 
   access_logs {
