@@ -7,7 +7,7 @@ resource "aws_lb" "default" {
   enable_deletion_protection = false
 
   access_logs {
-    bucket  = aws_s3_bucket.surrendra-terraform2.bucket
+    bucket  = surrendra-terraform2
     prefix  = "alb"
     enabled = true
   }
