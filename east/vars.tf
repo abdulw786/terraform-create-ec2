@@ -16,5 +16,9 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "devops"
+  default = "newdevops"
+}
+
+variable "app" {
+  default = "petclinic"
 }
