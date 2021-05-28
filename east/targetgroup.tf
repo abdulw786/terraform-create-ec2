@@ -14,7 +14,7 @@ resource "aws_alb_target_group" "default" {
   }
 }
 
-resource "aws_lb_target_group_attachment" "test" {
+resource "aws_lb_target_group_attachment" "default" {
   target_group_arn = aws_lb_target_group.default.arn
   target_id        = aws_instance.web2.id
   port             = 80
