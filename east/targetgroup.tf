@@ -13,3 +13,9 @@ resource "aws_alb_target_group" "default" {
     matcher = "200"  # has to be HTTP 200 or fails
   }
 }
+
+resource "aws_lb_target_group_attachment" "test" {
+  target_group_arn = aws_lb_target_group.default.arn
+  target_id        = aws_instance.web2.id
+  port             = 80
+}
