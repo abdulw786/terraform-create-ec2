@@ -2,7 +2,7 @@ resource "aws_alb_target_group" "default" {
   name = "petclinic-targetgroup"
   port = 80
   protocol = "HTTP"
-
+  vpc_id   = data.aws_vpc.default.id
   health_check {
     path = "/"
     port = 80
