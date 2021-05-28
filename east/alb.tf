@@ -11,3 +11,20 @@ resource "aws_lb" "default" {
     Environment = "production"
   }
 }
+
+resource "aws_lb_listener" "default" {
+  load_balancer_arn = aws_lb.default.arn
+  port              = "80"
+  protocol          = "HTTP"
+
+  default_action {
+    type = "fixed-response"
+
+    fixed_response {
+      content_type = "text/plain"
+      message_body = "Fixed response content"
+      status_code  = "200"
+    }
+  }
+}
+
