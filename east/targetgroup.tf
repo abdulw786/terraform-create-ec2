@@ -3,8 +3,6 @@ resource "aws_alb_target_group" "default" {
   port = 80
   protocol = "HTTP"
 
-  lifecycle   
-
   health_check {
     path = "/"
     port = 80
