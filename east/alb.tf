@@ -1,5 +1,4 @@
 resource "aws_lb" "default" {
-  for_each           = data.aws_subnet_ids.default.ids
   name               = var.app
   internal           = false
   load_balancer_type = "application"
